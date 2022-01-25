@@ -7,6 +7,7 @@
     --red:rgb(255, 0, 0);
     --lime:lime;
     --border:.1rem solid gray;
+    --box-shadow:0 .5rem 1rem gray;
 }
 *{
     margin: 0;
@@ -45,7 +46,7 @@ html{
     left: 0;
     right: 0;
     z-index: 999;
-    background: rgb(161, 161, 161);
+    background: rgb(217, 255, 0);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,4 +84,11 @@ html{
     color:var(--black);
     cursor: pointer;
     display: none;
+}
+body{
+    height: 300rem;
+}
+.header.active{
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
 }
