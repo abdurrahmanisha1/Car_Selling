@@ -2,6 +2,7 @@
 
 :root{
     --yellow:yellow;
+    --red:red;
     --yellow-light:#fff090;
     --black:#130f40;
     --red:rgb(255, 0, 0);
@@ -23,7 +24,7 @@
 
 html{
     font-size: 62.5%;
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-padding-top:7rem;
     scroll-behavior: smooth;
 }
@@ -38,7 +39,7 @@ html{
     padding: .8rem 3rem;
 }
 .btn:hover{
-    background: var(--yellow);
+    background: var(--red);
 }
 .header{
     position: fixed;
@@ -46,7 +47,7 @@ html{
     left: 0;
     right: 0;
     z-index: 999;
-    background: rgb(217, 255, 0);
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +60,7 @@ html{
     font-weight: bolder;
 }
 .header .logo span{
-    color: var(--yellow);
+    color: var(--red);
 }
 .header .navbar a{
     font-size:  1.9rem;
@@ -67,7 +68,7 @@ html{
     color: var(--black);
 }
 .header .navbar a:hover{
-    color: var(--yellow);
+    color: var(--red);
     transition: 0.4s;
 }
 .header .btn{
@@ -75,7 +76,7 @@ html{
 }
 .header #login-btn i{
     font-size: 2.5rem;
-    color: var(--yellow-light);
+    color: var(--black);
     cursor: pointer;
     display: none;
 }
@@ -85,10 +86,83 @@ html{
     cursor: pointer;
     display: none;
 }
-body{
-    height: 300rem;
-}
+
 .header.active{
     box-shadow: var(--box-shadow);
     padding: 2rem 9%;
 }
+
+/* <!--------- Login Form Start ----------> */
+
+.login-form-container{
+    position: fixed;
+    top: -105%;     /* top: 0; */
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    opacity: 0;
+}
+.login-form-container form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 50rem;
+}
+.login-form-container form .buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.login-form-container form  .btn{
+    display: block;
+    width: 100%;
+    margin: .5rem 0;;
+}
+.login-form-container form h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+.login-form-container form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color:var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+.login-form-container form p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.login-form-container form p a{
+    color: var(--red);
+    text-decoration: underline;
+}
+.login-form-container #close-login-form{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.login-form-container.active{
+    top: 0;
+    opacity: 1;
+}
+
+/* <!--------- Login Form End ------------> */
