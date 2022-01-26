@@ -8,6 +8,9 @@
     .header.active{
         padding: 2rem;
     }
+    section{
+        padding: 2rem;
+    }
 }
 @media only screen and (max-width:765px) {
     .header #login-btn i {
@@ -48,6 +51,7 @@
         font-size: 50%;
     }
     .btn{
-        display: none;
+        /* display: none; */
+        display: block;
     }
 }

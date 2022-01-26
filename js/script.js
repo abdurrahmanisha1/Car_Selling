@@ -1,7 +1,7 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 
-menu.onclick = () =>{
+menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 }
@@ -14,11 +14,11 @@ document.querySelector('#close-login-form').onclick = () => {
     document.querySelector('.login-form-container').classList.remove('active');
 }
 
-window.onscroll = () =>{
+window.onscroll = () => {
 
-    if(window.scrollY > 10){
+    if (window.scrollY > 10) {
         document.querySelector('.header').classList.add('active');
-    }else{
+    } else {
         document.querySelector('.header').classList.remove('active');
     }
 
@@ -26,12 +26,36 @@ window.onscroll = () =>{
     navbar.classList.remove('active')
 }
 
-window.onload = () =>{
+window.onload = () => {
 
-    if(window.scrollY > 10){
+    if (window.scrollY > 10) {
         document.querySelector('.header').classList.add('active');
-    }else{
+    } else {
         document.querySelector('.header').classList.remove('active');
     }
 
 }
+
+document.querySelector('.home').onmousemove = (e) => {
+
+    document.querySelectorAll('.home-parallax').forEach(elm => {
+
+        let speed = elm.getAttribute('data-speed');
+
+        let x = (window.innerWidth - e.pageX * speed) / 90;
+        let y = (window.innerHeight - e.pageY * speed) / 90;
+
+        elm.style.transform = `translateX(${y}px) translateY(${x}px)`;
+
+    });
+};
+
+document.querySelector('.home').onmouseleave = (e) => {
+
+    document.querySelectorAll('.home-parallax').forEach(elm => {
+
+        elm.style.transform = `translateX(0px) translateY(0px)`;
+
+    });
+
+};

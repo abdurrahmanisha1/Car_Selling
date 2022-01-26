@@ -28,6 +28,9 @@ html{
     scroll-padding-top:7rem;
     scroll-behavior: smooth;
 }
+section{
+    padding: 2rem 9%;
+}
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -166,3 +169,22 @@ html{
 }
 
 /* <!--------- Login Form End ------------> */
+
+/* <!--------- Home Section Start ------------> */
+
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+.home h1{
+    font-size: 7.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.home img{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* <!--------- Home Section End ------------> */
