@@ -188,3 +188,58 @@ section{
 }
 
 /* <!--------- Home Section End ------------> */
+
+/* <!--------- Icone Section START ------------> */
+
+.icons-container{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    gap: 1.5rem;
+    background: #eee;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
+}
+.icons-container .icons{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+.icons-container .icons:hover{
+    background: var(--black);
+}
+.icons-container .icons:active{
+    background: var(--yellow);
+}
+.icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: #eee;
+    color: var(--black);
+    text-align: center;
+}
+.icons-container .icons i:hover{
+    background: var(--yellow);
+}
+.icons-container .icons .content h3{
+    color: var(--yellow);
+    font-size: 2.5rem;
+}
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.icons-container .icons:hover .content h3{
+    color: #fff;
+}
+.icons-container .icons:hover .content p{
+    color: #eee;
+}
+
+/* <!--------- Icone Section End ------------> */
