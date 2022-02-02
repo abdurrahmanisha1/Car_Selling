@@ -45,4 +45,7 @@
     .header #menu-btn.fa-times{
         transform: rotate(180deg);
     }
+    .heading{
+        font-size: 3.2rem;
+    }
 }
